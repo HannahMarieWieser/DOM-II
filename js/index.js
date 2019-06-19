@@ -16,6 +16,7 @@ nav.forEach((navbut) => {
     navbut.addEventListener('mouseover', function(cnav){
     cnav.target.style.color = 'cyan';
     cnav.stopPropagation();
+    cnav.preventDefault()
 
     setTimeout(function(){
         cnav.target.style.color = '';
@@ -74,3 +75,10 @@ backgray.addEventListener('keydown', () => {
 backgray.addEventListener('dblclick', () => {
     backgray.style.backgroundColor = 'white'
 });
+
+
+// const dontleave = document.querySelector('body');
+// console.log(dontleave)
+window.addEventListener('load', () => {
+    alert('The page has loaded')
+})
